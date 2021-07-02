@@ -1,6 +1,3 @@
-<?php
-include "includes/header.php";
-?>
 <!DOCTYPE html>
 <html>
 
@@ -11,20 +8,21 @@ include "includes/header.php";
 
 <body>
     <div id="id01" class="modal">
-        
-        <form class="modal-content animate" style=" background: linear-gradient(to bottom,lightblue,#EEEEEE);">
+        <?php
+include "includes/header.php";
+?>
+        <form class="modal-content animate" style=" background: linear-gradient(to bottom,lightblue,#EEEEEE,orange);" action="login.php" method="post">
             <div class="imgcontainer">
             </div>
 
             <div class="container">
-                <h1>Login Here.</h1>
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
 
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit">Login</button>
+                <button type="submit" name="login">Login</button>
 
             </div>
         </form>

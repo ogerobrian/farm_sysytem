@@ -16,10 +16,10 @@
 
         /* Set a style for all buttons */
         button {
-            background-color: #4CAF50;
-            color: white;
+            background-color: cadetblue;
+            color: black;
             padding: 14px 20px;
-            margin: 8px 0;
+            margin: 8px 0n;
             border: none;
             cursor: pointer;
             width: 100%;
