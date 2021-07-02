@@ -11,12 +11,13 @@ include "includes/header.php";
 
 <body>
     <div id="id01" class="modal">
-
+        
         <form class="modal-content animate" style=" background: linear-gradient(to bottom,lightblue,#EEEEEE);">
             <div class="imgcontainer">
             </div>
 
             <div class="container">
+                <h1>Login Here.</h1>
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>
 
