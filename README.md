@@ -1,1 +1,1 @@
-ECHO is on.
+This is a farm management system to help you magage your gafrm.
