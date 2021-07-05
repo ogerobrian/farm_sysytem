@@ -11,9 +11,8 @@
         <?php
 include "includes/header.php";
 ?>
-        <form class="modal-content animate" style=" background: linear-gradient(to bottom,lightblue,#EEEEEE,orange);" action="login.php" method="post">
-            <div class="imgcontainer">
-            </div>
+        <form class="modal-content animate" style=" background: linear-gradient(to bottom,lightblue,#EEEEEE,orange);" action="RegisterAdmin.php" method="post">
+        <h3 style="text-align:center;font-family:courier;color:green;padding:10px;">Register New System Admin</h3>
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
@@ -22,7 +21,9 @@ include "includes/header.php";
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="passwd" required>
 
-                <button type="submit" name="login">Login</button>
+                <label for="psw"><b>Retype Password</b></label>
+                <input type="password" placeholder="Retype Password" name="con_passwd" required>
+                <button type="submit" name="add">Add</button>
 
             </div>
         </form>
