@@ -2,7 +2,7 @@
     // login block
     if(isset($_POST['login'])){
         $username=$_POST['username'];
-        $passwd=$_POST['passwd'];
+        $passwd=md5($_POST['passwd']);
         $query = mysqli_query($conn,"SELECT * FROM farm_admins WHERE username='$username' and passwd='$passwd'");
         $result = mysqli_num_rows($query);
 		if($result>0)
@@ -15,7 +15,7 @@
 		}
 		else
 		{
-			echo "<h1>Login Filed</h1>";
+			echo "<h1>Login Failed</h1>";
 		}
     }
 
@@ -23,6 +23,7 @@
     if(isset($_POST['add'])){
 
         $username=$_POST['username'];
+        $user_type=$_POST['user_type'];
         $passwd=md5($_POST['passwd']);
         $con_passwd=md5($_POST['con_passwd']);
 
@@ -34,7 +35,7 @@
             $admin_check= mysqli_num_rows($sql_result);
 
             if($admin_check==0){
-                $insert_query =mysqli_query($conn,"INSERT INTO farm_admins VALUES (0,'$username','$passwd')");
+                $insert_query =mysqli_query($conn,"INSERT INTO farm_admins VALUES (0,'$username','$user_type','$passwd')");
                 if($insert_query){
                     header("location:dashboard.php");
                 }
